@@ -10,6 +10,7 @@ Built for AFC, custom, by AVPreserve
 #### Requirements
 * Java Runtime Environment (JRE) or Java Development Kit (JDK)
 * MAVIS Title XML Validator dist folder
+* Completed AFC MAVIS Spreadsheet (this is the Excel template for generating batch MAVIS title xml according to AFC's specifications, and it is consumed by the MAVIS Title XML Validator in order to generate valid MAVIS XML for import)
 
 #### Instructions
 1. Unzip and copy the [MAVIS Title XML Validator zip file](https://github.com/avpreserve/MAVISTitleValidator/blob/master/MAVIS-Title-XML-Validator.zip) onto your desktop (or preferred location of your choice)
