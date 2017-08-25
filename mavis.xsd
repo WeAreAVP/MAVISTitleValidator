@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.wizardis.com.au/2005/12/MAVIS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mavis">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TitleWork" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="objectIdentifiers">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ObjectIdentifier" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="identifier"/>
+                                                    <xs:element name="identifierType">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute ref="xlin:href" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                    <xs:attribute ref="xlin:title" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="components">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="AudioTapeComponent">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="objectIdentifiers">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ObjectIdentifier">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="identifier"/>
+                                                                            <xs:element name="identifierType">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute ref="xlin:href" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                                            <xs:attribute ref="xlin:title" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="collection">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute ref="xlin:href" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                    <xs:attribute ref="xlin:title" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:string" name="carrierSize"/>
+                                                    <xs:element type="xs:string" name="categoryMaterial"/>
+                                                    <xs:element type="xs:byte" name="componentNo"/>
+                                                    <xs:element type="xs:string" name="format"/>
+                                                    <xs:element type="xs:string" name="itemType"/>
+                                                    <xs:element type="xs:string" name="techCode"/>
+                                                    <xs:element name="carriers">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="AudioTapeCarrier">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="objectIdentifiers">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="ObjectIdentifier" maxOccurs="unbounded" minOccurs="0">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element type="xs:string" name="identifier"/>
+                                                                                                    <xs:element name="identifierType">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:simpleContent>
+                                                                                                                <xs:extension base="xs:string">
+                                                                                                                    <xs:attribute ref="xlin:href" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                                                                    <xs:attribute ref="xlin:title" xmlns:xlin="http://www.w3.org/TR/xlink"/>
+                                                                                                                </xs:extension>
+                                                                                                            </xs:simpleContent>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element type="xs:byte" name="actualReelNo"/>
+                                                                            <xs:element type="xs:byte" name="carrierNo"/>
+                                                                            <xs:element type="xs:string" name="itemType"/>
+                                                                            <xs:element type="xs:string" name="rackNo"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="mediums">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="WorkMedium">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="isPrincipal"/>
+                                                    <xs:element type="xs:string" name="medium"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="objectDates">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Date-Year">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="dateType"/>
+                                                    <xs:element type="xs:byte" name="dayFrom"/>
+                                                    <xs:element type="xs:byte" name="dayTo"/>
+                                                    <xs:element type="xs:string" name="isCirca"/>
+                                                    <xs:element type="xs:byte" name="monthFrom"/>
+                                                    <xs:element type="xs:byte" name="monthTo"/>
+                                                    <xs:element type="xs:time" name="timeFrom"/>
+                                                    <xs:element type="xs:time" name="timeTo"/>
+                                                    <xs:element type="xs:short" name="yearFrom"/>
+                                                    <xs:element type="xs:short" name="yearTo"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="objectSummaries">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ObjectSummary">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="summary"/>
+                                                    <xs:element type="xs:string" name="summaryType"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="preferredTitle">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Title">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="descr"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="preservationLevel"/>
+                            <xs:element type="xs:byte" name="recordStatus"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="database"/>
+            <xs:attribute type="xs:string" name="organisation"/>
+            <xs:attribute type="xs:string" name="version"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
